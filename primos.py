@@ -2,11 +2,10 @@ import unittest
 
 def is_primo(value):
     
-    if value % 2 != 0:
-        return True
-    elif value == 2:
+    if value == 2:
         return  True
     for n in range(2, value):
+       
         if value % n == 0:
             return False
     return True
@@ -32,7 +31,10 @@ class testPrimo (unittest.TestCase):
         self.assertEqual(result, False)
     def test11(self):
         result =is_primo(11)
-        self.assertEqual(is_primo(11), True)
+        self.assertEqual(result, True)
+    def test9(self):
+        result =is_primo(9)
+        self.assertEqual(result, False)
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main()   
